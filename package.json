@@ -2,6 +2,7 @@
   "name": "magpie-codex-model-filter",
   "version": "0.2.0",
   "description": "Pick which native Codex account models Magpie hides from the Codex desktop model picker, from a panel in Magpie's settings",
+  "license": "MIT",
   "type": "module",
   "private": true,
   "main": "./service.mjs",
@@ -11,6 +12,7 @@
     "panel",
     "scripts",
     "README.md",
+    "LICENSE",
     "test/smoke.mjs"
   ],
   "scripts": {
