@@ -1,0 +1,44 @@
+{
+  "name": "magpie-codex-model-filter",
+  "version": "0.2.0",
+  "description": "Pick which native Codex account models Magpie hides from the Codex desktop model picker, from a panel in Magpie's settings",
+  "type": "module",
+  "private": true,
+  "main": "./service.mjs",
+  "files": [
+    "service.mjs",
+    "lib",
+    "panel",
+    "scripts",
+    "README.md",
+    "test/smoke.mjs"
+  ],
+  "scripts": {
+    "test": "node --test --test-force-exit \"test/*.test.mjs\"",
+    "smoke": "bun test/smoke.mjs",
+    "check": "pwsh -NoProfile -File scripts/check.ps1",
+    "status": "node scripts/plugin-status.mjs",
+    "reload": "node scripts/reload.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "engines": {
+    "bun": ">=1.4.2",
+    "node": ">=20"
+  },
+  "magpie": {
+    "options": {
+      "magpiePath": "D:/Apps/magpie/magpie.exe",
+      "port": 3477
+    },
+    "panels": [
+      {
+        "slot": "settings",
+        "title": "Codex model filter",
+        "titles": {
+          "zh": "Codex 模型过滤"
+        },
+        "file": "panel/index.html"
+      }
+    ]
+  }
+}

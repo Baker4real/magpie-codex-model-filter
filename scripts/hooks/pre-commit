@@ -1,0 +1,3 @@
+#!/bin/sh
+# Runs `npm run check` before every commit. Enabled per clone with: git config core.hooksPath scripts/hooks
+exec pwsh -NoProfile -File scripts/check.ps1
